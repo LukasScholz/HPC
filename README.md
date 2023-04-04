@@ -1,2 +1,2 @@
 # HPC
-Repository corresponding to the High Performance Computing lecture
+Alle Aufgaben sind in ihre enstprechenden Ordner sortiert
