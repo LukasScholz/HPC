@@ -231,7 +231,7 @@ loop_repeat:
         ldp  d8,  d9, [sp], #16
 
 
-        // write number of flops to return register (*4 because of 4 functions)
+        // write number of flops to return register (*4 because of 4 loops)
         mov x0, 30*8*4
 
         ret
