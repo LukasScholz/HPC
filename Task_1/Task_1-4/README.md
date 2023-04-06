@@ -11,15 +11,15 @@ enthalten in peak_asimd_all_sp.s
 enthalten in all_benchmarks.txt
 ### Ausgabe aus bearbeiteter Benchmark mit n Threads auf n Cores
 enthalten in:  
-all_benchmarks_1thread_1core.txt
-all_benchmarks_2_threads_2cores.txt
-all_benchmarks_3_threads_3cores.txt
-all_benchmarks_4_threads_4cores.txt
+all_benchmarks_1thread_1core.txt  
+all_benchmarks_2_threads_2cores.txt  
+all_benchmarks_3_threads_3cores.txt  
+all_benchmarks_4_threads_4cores.txt  
 Cores.png (Grafische Darstellung)
 ### Ausgabe aus bearbeiteter Benchmark mit n Threads auf 1 Core
 enthalten in:  
-all_benchmarks_1thread_1core.txt
-all_benchmarks_2_threads_1core.txt
-all_benchmarks_3_threads_1core.txt
-all_benchmarks_4_threads_1core.txt
+all_benchmarks_1thread_1core.txt  
+all_benchmarks_2_threads_1core.txt  
+all_benchmarks_3_threads_1core.txt  
+all_benchmarks_4_threads_1core.txt  
 Threads.png (Grafische Darstellung)
