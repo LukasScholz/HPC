@@ -6,7 +6,7 @@ enthalten in topo_info.txt
 ### Ausgabe aus Vorgegebener Benchmark
 enthalten in code_example.txt
 ### Bearbeitete Benchmark (mit allen kernels)
-enthalten in peak_asimd_all_sp.s (auch wenn der Dateiname nicht mehr wirklich zutrifft)
+enthalten in peak_asimd_all_sp.s
 ### Ausgabe aus bearbeiteter Benchmark
 enthalten in all_benchmarks.txt
 ### Ausgabe aus bearbeiteter Benchmark mit n Threads auf n Cores
