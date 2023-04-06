@@ -1,0 +1,13 @@
+Machine (7760MB total)
+  Package L#0
+    NUMANode L#0 (P#0 7760MB)
+    L3 L#0 (32MB)
+      L2 L#0 (1024KB) + L1d L#0 (64KB) + L1i L#0 (64KB) + Core L#0 + PU L#0 (P#0)
+      L2 L#1 (1024KB) + L1d L#1 (64KB) + L1i L#1 (64KB) + Core L#1 + PU L#1 (P#1)
+      L2 L#2 (1024KB) + L1d L#2 (64KB) + L1i L#2 (64KB) + Core L#2 + PU L#2 (P#2)
+      L2 L#3 (1024KB) + L1d L#3 (64KB) + L1i L#3 (64KB) + Core L#3 + PU L#3 (P#3)
+  HostBridge
+    PCI 00:04.0 (NVMExp)
+      Block(Disk) "nvme0n1"
+    PCI 00:05.0 (Ethernet)
+      Net "eth0"

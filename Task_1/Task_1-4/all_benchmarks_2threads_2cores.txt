@@ -1,0 +1,6 @@
+running ASIMD microbenchmarks
+  threads: 2
+peak_asimd_fmla_sp
+  duration: 21.8369 seconds
+  GFLOPS: 109.906
+finished ASIMD microbenchmarks
