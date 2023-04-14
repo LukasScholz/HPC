@@ -1,2 +1,2 @@
 # HPC
-Alle Aufgaben sind in ihre enstprechenden Ordner sortiert
+All exercises are located in their respective folders
