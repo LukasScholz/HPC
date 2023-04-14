@@ -1,4 +1,8 @@
 # Task 3-4
+
+## Command
+/home/lukas/HPC/aarch64_micro/build/micro_asimd
+
 ## Output from benchmark
 running ASIMD microbenchmarks  
   threads: 4  
