@@ -44,7 +44,7 @@ loop_repeat:
 
 
         // write number of flops to return register
-        mov x0, 30*8
+        mov x0, 7*8
 
         ret
         .size latency_src_asimd_fmul_sp, (. - latency_src_asimd_fmul_sp)
