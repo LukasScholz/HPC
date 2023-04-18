@@ -22,12 +22,12 @@ Changed Loop to:
 
 
 ## Output from benchmark
-running ASIMD microbenchmarks
-  threads: 4
-latency_src_asimd_fmla_sp
-  duration: 15.422 seconds
-  GFLOPS: 72.6235
-finished ASIMD microbenchmarks
-All tests completed
+running ASIMD microbenchmarks  
+  threads: 4  
+latency_src_asimd_fmla_sp  
+  duration: 15.422 seconds  
+  GFLOPS: 72.6235  
+finished ASIMD microbenchmarks  
+All tests completed  
 ## Explanation
 As the Pipelines are now not occupied by waiting for the read-write dependencies. The GFLOPS increased dramatically while the duration decreased dramatically. It is however not as fast as completely non-dependent operations. 
