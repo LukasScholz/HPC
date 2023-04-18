@@ -1,0 +1,34 @@
+# Task 3-4
+
+## Command
+/home/lukas/HPC/aarch64_micro/build/micro_asimd
+
+## Changes to Code
+
+Changed Loop to:
+
+loop_repeat:
+        sub x0, x0, #1
+        fmla v0.4s, v0.4s, v1.4s
+        fmla v2.4s, v2.4s, v1.4s
+        fmla v3.4s, v3.4s, v1.4s
+        fmla v4.4s, v4.4s, v1.4s
+
+        fmla v5.4s, v5.4s, v1.4s
+        fmla v6.4s, v6.4s, v1.4s
+        fmla v7.4s, v7.4s, v1.4s
+        fmla v8.4s, v8.4s, v1.4s
+
+        cbnz x0, loop_repeat
+
+
+## Output from benchmark
+running ASIMD microbenchmarks
+  threads: 4
+latency_src_asimd_fmla_sp
+  duration: 7.75536 seconds
+  GFLOPS: 618.927
+finished ASIMD microbenchmarks
+All tests completed
+## Explanation
+As the Pipelines are now not occupied. The speed increase greatly
