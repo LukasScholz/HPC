@@ -7,7 +7,7 @@
 
 Changed Loop to:
 
-loop_repeat:
+        loop_repeat:
         sub x0, x0, #1
         fmla v0.4s, v0.4s, v1.4s
         fmla v2.4s, v2.4s, v1.4s
@@ -27,7 +27,7 @@ running ASIMD microbenchmarks
   threads: 4
 latency_src_asimd_fmla_sp
   duration: 7.75536 seconds
-  GFLOPS: 618.927
+  GFLOPS: 144.4163
 finished ASIMD microbenchmarks
 All tests completed
 ## Explanation
