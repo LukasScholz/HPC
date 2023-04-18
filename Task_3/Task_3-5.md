@@ -25,8 +25,8 @@ Changed Loop to:
 running ASIMD microbenchmarks
   threads: 4
 latency_src_asimd_fmla_sp
-  duration: 7.75536 seconds
-  GFLOPS: 144.4163
+  duration: 15.422 seconds
+  GFLOPS: 72.6235
 finished ASIMD microbenchmarks
 All tests completed
 ## Explanation
