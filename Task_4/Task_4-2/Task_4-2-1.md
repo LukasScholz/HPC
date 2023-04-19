@@ -1,0 +1,2 @@
+For any dense matrix-matrix multiplication, there has to be k fmadd operations made per entry in the resulting m x n-Matrix. This Matrix has m*n entries with fmadd taking 2 floating point operations per calculation.  
+Therefore there has to be at least m*n*k*2 floating point operations.
