@@ -3,6 +3,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include <bitset>
+#include <chrono>
+#include <cmath>
 using namespace std;
 
 extern "C" {
@@ -15,6 +17,7 @@ int main() {
     int M = 16;
     int N = 6;
     int K = 1;
+    int repeats = 100000000;
 
     float random = ((float)(rand() % 100000))/1000;
 
@@ -41,15 +44,25 @@ int main() {
 
     gemm_asm_asimd_16_6_1(i_a, i_b, io_c );
 
-
-for(int a_ = 0; a_ < 4; a_++)
+for(int a_ = 0; a_ < M; a_++)
   {
-    for(int b_ = 0; b_ < 2; b_++)
+    for(int b_ = 0; b_ < N; b_++)
     {
       cout << c[a_][b_] << " ";
     }
     cout << endl;
   }
+
+    // measure time
+  auto before = chrono::steady_clock::now();
+    for(int x=0; x < repeats; x++)
+        gemm_asm_asimd_16_6_1(i_a, i_b, io_c );
+    auto after = chrono::steady_clock::now();
+    auto duration = chrono::duration_cast< chrono::duration<double> >(after - before);
+
+    // with 8 FLOPS per fmla instruction
+  cout << "Duration: " << duration.count() << endl;
+  cout << "GFLOPS: " << (M*N*K*K*repeats/duration.count()/pow(10,9))*8 << endl;
 
   return 0;
 }
