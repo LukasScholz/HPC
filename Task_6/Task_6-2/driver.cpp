@@ -9,6 +9,7 @@ using namespace std;
 
 extern "C" {
     void gemm_asm_asimd_16_6_1(float const * i_a, float const * i_b, float * io_c );
+    void gemm_asm_asimd_16_6_k(float const * i_a, float const * i_b, float * io_c, int k);
 }
 
 float generate_random_value();
@@ -42,7 +43,7 @@ int main() {
     float const * i_b = * b;
     float * io_c = * c;
 
-    gemm_asm_asimd_16_6_1(i_a, i_b, io_c );
+    gemm_asm_asimd_16_6_1(i_a, i_b, io_c);
 
 for(int a_ = 0; a_ < M; a_++)
   {
@@ -56,7 +57,7 @@ for(int a_ = 0; a_ < M; a_++)
     // measure time
   auto before = chrono::steady_clock::now();
     for(int x=0; x < repeats; x++)
-        gemm_asm_asimd_16_6_1(i_a, i_b, io_c );
+        gemm_asm_asimd_16_6_1(i_a, i_b, io_c);
     auto after = chrono::steady_clock::now();
     auto duration = chrono::duration_cast< chrono::duration<double> >(after - before);
 

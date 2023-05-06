@@ -1,18 +1,19 @@
         .text
-        .type gemm_asm_asimd_16_6_1, %function
-        .global gemm_asm_asimd_16_6_1
+        .type gemm_asm_asimd_16_6_k, %function
+        .global gemm_asm_asimd_16_6_k
 
         /*
          * Performs the matrix-multiplication C+=A*B
-         * with the shapes (16x6) = (16x1) * (1x6).
+         * with the shapes (16x6) = (16xk) * (kx6).
          * The input-data is of type float.
          *
          * @param x0 pointer to A.
          * @param x1 pointer to B.
          * @param x2 pointer to C.
+         * @param x3 value of k
          */ 
 
-gemm_asm_asimd_16_6_1:
+gemm_asm_asimd_16_6_k:
 /*
         // store
         stp x19, x20, [sp, #-16]!
@@ -29,7 +30,9 @@ gemm_asm_asimd_16_6_1:
 */
 
         // your matrix kernel goes here!
+        ldr x8, [x3]
 
+    l_k:
         // load B into registers
         ldp s23, s24, [x1]
 		ldp s25, s26, [x1, #8]
@@ -308,6 +311,9 @@ gemm_asm_asimd_16_6_1:
 		stp s17, s18, [x2], #8
 		stp s19, s20, [x2]
 
+    // Springe falls k > 0
+        adds x8, x8, #-1
+        b.eq l_k
 
 
 
@@ -326,4 +332,4 @@ gemm_asm_asimd_16_6_1:
         ldp x19, x20, [sp], #16
 */
         ret
-        .size gemm_asm_asimd_16_6_1, (. - gemm_asm_asimd_16_6_1)
+        .size gemm_asm_asimd_16_6_k, (. - gemm_asm_asimd_16_6_k)
